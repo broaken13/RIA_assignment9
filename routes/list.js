@@ -9,13 +9,20 @@ router.all('*', (req, res, next) => {
 	next();
 });
 
-/* GET home page. */
 router.get('/', (req, res, next) => {
-	res.render('home', pugObject);
+	res.render('list/lists', pugObject);
 });
 
 router.get('/index', (req, res, next) => {
-	res.render('home', pugObject);
+	res.render('list/lists', pugObject);
+});
+
+router.get('/create', (req, res, next) => {
+	res.render('list/edit', pugObject);
+});
+
+router.get('/edit', (req, res, next) => {
+	res.render('list/edit', pugObject);
 });
 
 module.exports = router;
