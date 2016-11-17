@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const PugObject = require('../pugObject');
+const BasePugObject = require('../pugObject');
 
-var pugObject = new PugObject();
+var pugObject = new BasePugObject();
 
 router.all('*', (req, res, next) => {
-	pugObject = new PugObject();
+	pugObject = new BasePugObject();
 	next();
 });
 
